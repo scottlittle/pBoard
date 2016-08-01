@@ -22,7 +22,7 @@ PShape s; //the object to be displayed
 void onCreate(Bundle savedInstanceState) {
   super.onCreate(savedInstanceState);
   // fix so screen doesn't go to sleep when app is active
-  getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+  //getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 }
 //********************************************************************
 
