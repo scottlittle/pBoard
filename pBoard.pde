@@ -1,10 +1,13 @@
+
 //Scott Little 2015, GPLv3
 //pBoard is Processing for Cardboard
 
-import android.os.Bundle;  //for 
+import android.os.Bundle;  //for
+import android.app.Activity;
 import android.view.WindowManager;
 import ketai.sensors.*;  //ketai library for sensors
 KetaiSensor sensor;
+Activity act;
 
 float ax,ay,az,mx,my,mz;  //sensor variables
 float eyex = 50; //camera variables
@@ -22,7 +25,8 @@ PShape s; //the object to be displayed
 void onCreate(Bundle savedInstanceState) {
   super.onCreate(savedInstanceState);
   // fix so screen doesn't go to sleep when app is active
-  //getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+  act = this.getActivity();
+  act.getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 }
 //********************************************************************
 
@@ -31,7 +35,7 @@ void setup() {
   sensor.start();
   
   size(displayWidth,displayHeight,P3D);  //used to set P3D renderer
-  //orientation(LANDSCAPE);  //causes crashing if not started in this orientation
+  orientation(LANDSCAPE);  //causes crashing if not started in this orientation
   
   lv = createGraphics(displayWidth/2,displayHeight,P3D); //size of left viewport
   rv = createGraphics(displayWidth/2,displayHeight,P3D);
