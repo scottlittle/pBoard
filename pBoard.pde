@@ -1,5 +1,5 @@
 
-//Scott Little 2015, GPLv3
+//Scott Little 2017, MIT License
 //pBoard is Processing for Cardboard
 
 import android.os.Bundle;  //for
